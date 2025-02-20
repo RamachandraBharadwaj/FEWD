@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return  swalpa(event)">
+        <label>Name
+            <input type="text" id="swalpa">
+        </label>
+        <input type="submit">
+    </form>
+</body>
+<script>
+    function swalpa(event)
+    {
+        event.preventDefault()
+        let x=document.getElementById("swalpa").value;
+        console.log(x);
+        return false;
+    }
+    swalpa();
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navabar">
+        <ul>
+            <li><a href=".">home</a></li>
+            <li><a href="./signup.html">signup</a></li>
+            <li><a href="./login.html">login</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to signup page !</h1>
+    <form>
+        <label for="name"> Name:
+            <input type="text" id="name">
+        </label>
+        <label for="password"> password:
+            <input type="password" id="password">
+        </label>
+        <label for ="number">Number: 
+            <input type="number" id="number">
+        </label>
+        <input type="button" onclick=print_names()>submit
+    </form>
+    
+</body>
+<script>
+    function print_names()
+    {
+        const nam=document.getElementById("name").value;
+        const password=document.getElementById("password").value;
+        const numb=document.getElementById("number").value;
+
+        console.log(nam,password,numb);
+    }
+    print_names();
+
+</script>
+</html>
