@@ -4,21 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h2{
+            color: coral;
+            background-color:black;
+        }
+
+    </style>
 </head>
+
 <body>
-    <form onsubmit="return  swalpa(event)">
-        <label>Name
-            <input type="text" id="swalpa">
+    <h1 style="color: chartreuse; justify-content: center; background-color: black;">Feedback form !</h1>
+    <h2>hello !</h2>
+    <form onsubmit="swalpa()">
+        <label>Name :
+            <input type="text" id="name" name="name" placeholder="name">
         </label>
-        <input type="submit">
+        <br>
+        <br>
+        <label>Email :
+            <input type="text" id="email" name="email" placeholder="email">
+        </label>
+        <br>
+        <br>
+        <label>Phone : 
+            <input type="number" id="phone_number" name="phone_number" placeholder="Phone">
+        </label>
+        <br>
+        <br>
+        <label>Feedback :
+            <input type="range" min="1" max="10" step="1" value="5" required id="feedback">
+        </label>
+        <br>
+        <br>
+        <label> Any Questions ?
+            <br>
+            <br>
+            <textarea rows="5" cols="100" placeholder="ask questions..." autofocus wrap="soft" required id="questions"></textarea>
+        </label>
+        <br>
+        <br>
+        <label>Additional comments :
+            <br>
+            <br>
+            <textarea rows="5" cols="100" placeholder="additional comments..." autofocus wrap="hard" id="comments"></textarea>
+
+        </label>
+        <br>
+
+        <input type="submit" value="submit">
     </form>
+    <div id="feedbacks">
+    </div>
 </body>
 <script>
-    function swalpa(event)
+    function swalpa()
     {
         event.preventDefault()
-        let x=document.getElementById("swalpa").value;
-        console.log(x);
+        let name=document.getElementById("name").value;
+        let number=document.getElementById("email").value;
+        let phone=document.getElementById("phone_number").value;
+        let feedback=document.getElementById("feedback").value;
+        let questions=document.getElementById("questions").value;
+        let comments=document.getElementById("comments").value;
+
+        console.log(name);
+
+        if(name==null || number==null || phone==null)
+        {
+            alert("One of the fields is empty ! (its optional but still )")
+        } 
+
+
+        console.log(name,phone,number,feedback,questions,comments);
+
+        const feedDiv=document.getElementById("feedbacks");
+        const newone=document.createElement("div");
+        for(let i=0;i<6;i++)
+        {
+            
+        }
+
         return false;
     }
     swalpa();
