@@ -1,0 +1,7 @@
+
+FEWD-3-2-CS-F-2024_25-LAB-4 
+Create Home,About us, Products,Parteners, Contact Us pages for a static E-Commerce website using Bootstrap
+
+ Create Home,About us, Products,Parteners, Contact Us pages for a static E-Commerce website using Bootstrap. 
+ Add a gallery page using Bootstrap grid model. Add Navbar,header and footer to all pages 
+ Add a login link(Modal)
