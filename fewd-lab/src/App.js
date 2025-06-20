@@ -4,6 +4,8 @@ import { useState,useEffect } from 'react';
 import DragAndDropExample from './Dragger';
 import Login from './Login';
 import ContactUs from './ContactUs';
+import Contento from './Contento';
+
 
 function App() {
 
@@ -40,6 +42,7 @@ function App() {
       ):(
         <Login onLogin={setUser}/>
       )}
+      <Contento></Contento>
     </div>
   );
 
